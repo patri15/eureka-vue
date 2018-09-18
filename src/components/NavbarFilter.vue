@@ -88,9 +88,9 @@ export default {
     color: black;
   }
 
-  a {
-    font-weight: bold;
-  }
+  // a {
+  //   font-weight: bold;
+  // }
 
   span {
     font-weight: initial;
