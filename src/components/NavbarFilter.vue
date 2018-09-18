@@ -28,7 +28,7 @@
                     <i class='fas fa-angle-down' style='color: #ff9900'></i>
                   </a>
                   <div class='dropdown-menu'>
-                    <a class='dropdown-item' href='#' v-for="product in filterBy(products, 'Entrees')">Entrees</a>
+                    <a class='dropdown-item' href='#'>Entrees</a>
                     <a class='dropdown-item' href='#'>Second Courses</a>
                     <a class='dropdown-item' href='#'>Salads</a>
                     <a class='dropdown-item' href='#'>Deserts</a>
@@ -71,41 +71,38 @@
 </template>
 
 <script>
-import axios from 'axios';
-import RangeSlider from 'RangeSlider.vue';
+  import axios from 'axios';
+  import RangeSlider from './RangeSlider.vue';
 
-export default {
-  components: {
-    RangeSlider
+  export default {
+    components: {
+      RangeSlider
+    }
   }
 </script>
 
 <style lang="scss">
-.nav-sort {
-  background-color: #f2f2f2;
+  .nav-sort {
+    background-color: #f2f2f2;
 
-  .nav-link {
-    color: black;
+    .nav-link {
+      color: black;
+    }
+
+    a {
+      font-weight: bold;
+    }
+
+    span {
+      font-weight: initial;
+    }
   }
 
-  // a {
-  //   font-weight: bold;
-  // }
-
-  span {
-    font-weight: initial;
+  .dropdown-menu {
+    border-color: transparent;
   }
-}
 
-.dropdown-menu {
-  border-color: transparent;
-}
-
-.dropdown-toggle::after {
-  display: none !important;
-}
-
-
-// range slider
-
+  .dropdown-toggle::after {
+    display: none !important;
+  }
 </style>

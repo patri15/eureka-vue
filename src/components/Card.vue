@@ -3,13 +3,7 @@
     <div class="container-fluid" v-if="errored">
       <p>We're sorry, we're not able to retrieve this information at the moment, please try back.</p>
     </div>
-    <!-- <div>
-      <p v-for="item in list">
-        Line:
-        <span v-text="item"></span>
-      </p>
-      <infinite-loading @infinite="infiniteHandler"></infinite-loading>
-    </div> -->
+
     <div class="container cards">
       <div class="row">
         <div v-for="product in products.data" class = "card col-lg-3 zoom">
@@ -22,6 +16,13 @@
         </div>
       </div>
     </div>
+    <!-- <div>
+      <p v-for="item in list">
+      Line:
+      <span v-text="item"></span>
+      </p>
+      <infinite-loading @infinite="infiniteHandler"></infinite-loading>
+    </div> -->
   </div>
 </template>
 
@@ -48,6 +49,7 @@ export default {
         this.errored = true
       })
       .finally(() => this.loading = false)
+      .then()
   },
   // methods: {
   //   infiniteHandler($state) {
