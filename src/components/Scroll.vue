@@ -3,19 +3,6 @@
     <div class="container-fluid" v-if="errored">
       <p>We're sorry, we're not able to retrieve this information at the moment, please try back.</p>
     </div>
-
-    <div class="container cards">
-      <div class="row">
-        <div v-for="product in products.data" class = "card col-lg-3 zoom">
-          <img class="card-img-top" :src= "product.imgurl"  alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title">{{ product.name }}</h4>
-            <p class="card-text description">{{ product.descrption }}</p>
-            <p class="card-text price">{{ product.price }} $</p>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- <div>
       <p v-for="item in list">
       Line:
@@ -49,7 +36,6 @@ export default {
         this.errored = true
       })
       .finally(() => this.loading = false)
-      .then()
   },
   // methods: {
   //   infiniteHandler($state) {
@@ -71,45 +57,5 @@ export default {
 
 
 <style lang="scss">
-.container-fluid {
-  padding-top: 15px;
-  background-color: transparent;
-  text-align: center;
-}
 
-.zoom {
-  transition: transform .2s;
-  margin: 0 auto;
-  background: white;
-  text-align: center;
-  border-top: transparent;
-  border-left: transparent;
-}
-
-.zoom:hover {
-  -ms-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-  z-index: 1;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.zoom:nth-of-type(4n+0) {
-  border-right: transparent;
-}
-
-.description {
-  color: #bfbfbf;
-  font-weight: bolder;
-}
-
-.price {
-  color: #ff9900;
-  font-weight: bolder;
-}
-
-.cards {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
 </style>

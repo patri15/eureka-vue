@@ -5,7 +5,7 @@
       <header-main></header-main>
     </div>
     <navbar-filter></navbar-filter>
-    <card></card>
+    <scroll></scroll>
     <footer-main></footer-main>
   </div>
 </template>
@@ -16,7 +16,7 @@ import NavbarTop from './components/NavbarTop.vue';
 import HeaderMain from './components/Header.vue';
 import NavbarFilter from './components/NavbarFilter.vue';
 import FooterMain from './components/Footer.vue';
-import Card from './components/Card.vue';
+import Scroll from './components/Scroll.vue';
 import InfiniteLoading from 'vue-infinite-loading';
 
 export default {
@@ -26,18 +26,17 @@ export default {
     HeaderMain,
     NavbarFilter,
     FooterMain,
-    Card,
+    Scroll,
     InfiniteLoading
   }
 }
 </script>
 
 <style lang="scss">
-.header-top {
-  background-image: url("https://www.passionclub.ro/upload/slider/slider-1.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
+  .header-top {
+    background-image: url("https://www.passionclub.ro/upload/slider/slider-1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 </style>
