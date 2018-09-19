@@ -1,5 +1,5 @@
 <template>
-  <range-slider
+  <range-slider>
     class="slider"
     min="10"
     max="1000"
@@ -10,7 +10,6 @@
 
 <script>
 import RangeSlider from 'vue-range-slider'
-// you probably need to import built-in style
 import 'vue-range-slider/dist/vue-range-slider.css'
 
 export default {
