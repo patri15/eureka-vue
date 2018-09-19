@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer >
     <div class='container-fluid opening'>
       <div class='row'>
         <div class='col-md-4'></div>
